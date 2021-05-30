@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "meta_description": {
+      "type": "string"
+    },
+    "meta_title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "category": {
+      "via": "products",
+      "model": "categories"
+    },
+    "comments": {
+      "via": "product",
+      "collection": "comments"
+    },
+    "reviews": {
+      "via": "product",
+      "collection": "reviews"
+    },
+    "whishlists": {
+      "via": "products",
+      "collection": "whishlist"
+    }
+  }
+}

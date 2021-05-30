@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "whishlists",
+  "info": {
+    "name": "Whishlist"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "via": "whishlists",
+      "collection": "products",
+      "dominant": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "whishlist"
+    }
+  }
+}

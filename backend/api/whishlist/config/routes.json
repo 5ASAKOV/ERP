@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/whishlists",
+      "handler": "whishlist.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/whishlists/count",
+      "handler": "whishlist.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/whishlists/:id",
+      "handler": "whishlist.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/whishlists",
+      "handler": "whishlist.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/whishlists/:id",
+      "handler": "whishlist.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/whishlists/:id",
+      "handler": "whishlist.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
