@@ -51,14 +51,10 @@ const Content = ({ product }) => {
     <section className="product-content">
       <div className="product-content__intro">
         <h5 className="product__id">Product ID:<br></br>{product.id}</h5>
-        <span className="product-on-sale">Sale</span>
         <h2 className="product__name">{product.name}</h2>
 
         <div className="product__prices">
           <h4>${ product.price }</h4>
-          {product.discount &&
-            <span>${ product.price }</span>
-          }
         </div>
       </div>
 
